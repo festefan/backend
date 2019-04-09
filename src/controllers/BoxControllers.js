@@ -1,7 +1,7 @@
 const Box= require('../models/Box')
 
 
-class BoxControllers{
+class BoxController{
  async store(req, res){
      
     const box= await   Box.create( req.body)  
@@ -16,4 +16,4 @@ class BoxControllers{
         return res.json(box)
     }
 }
-module.exports = new BoxControllers()
+module.exports = new BoxController()
